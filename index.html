@@ -6,10 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-/* Professional Background with Gradient */
 body {
     margin: 0;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
     background: radial-gradient(circle at top, #1a1a2e 0%, #0f0f0f 100%);
     color: #ffffff;
     text-align: center;
@@ -20,21 +19,89 @@ body {
 }
 
 .container {
-    padding: 30px 20px;
+    padding: 20px;
     max-width: 500px;
     margin: auto;
 }
 
-/* Image styling */
+/* 1. Sabse upar Heading */
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+/* 2. Heading ke niche Photo */
 .banner img {
-    width: 65%;
-    max-width: 220px;
+    width: 60%;
+    max-width: 200px;
     height: auto;
     border-radius: 20px;
     margin-bottom: 25px;
-    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2); /* Soft green glow */
+    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+.bonus-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.bonus-text {
+    font-size: 18px;
+    color: #00ff88;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* 3. Button ke upar Online badge */
+.status-badge {
+    display: inline-block;
+    background: rgba(0, 255, 136, 0.1);
+    color: #00ff88;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 50px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    animation: pulse 1.5s infinite;
+}
+
+/* 4. Button ke niche alag colour mein text */
+.id-text {
+    margin-top: 15px;
+    color: #ffcc00; /* Gold/Yellow colour for distinction */
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.footer {
+    margin-top: 40px;}
 
 h1 {
     font-size: 28px;
@@ -130,7 +197,7 @@ p {
 
     <div class="footer">
         TRUSTED PLATFORM | 24/7 INSTANT SERVICE <br>
-        © 2024 Mahadev Book Official
+        © 2010 Mah@dev B0ok Official
     </div>
 
 </div>

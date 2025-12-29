@@ -13,21 +13,18 @@ body {
     color: #ffffff;
     text-align: center;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
 .container { 
-    padding: 50px 20px 20px 20px; /* Header ke upar gap badhaya */
+    padding: 40px 20px; /* Header ke upar sahi gap */
     max-width: 500px; 
     margin: 0 auto;
-    flex: 1;
 }
 
 /* Premium Gold Gradient Header */
 h1 { 
     font-size: 34px; 
-    margin-bottom: 30px; 
+    margin: 10px 0 30px 0; 
     text-transform: uppercase; 
     font-weight: 900; 
     background: linear-gradient(to bottom, #cf9710 22%, #ffde59 50%, #cf9710 78%);
@@ -94,12 +91,12 @@ h1 {
     100% { transform: scale(1); } 
 }
 
+/* Footer ko content ke paas laya gaya hai */
 .footer { 
-    padding: 25px 0;
+    margin-top: 50px; /* Isse thoda niche push hoga par hadd se zyada nahi */
+    padding-bottom: 30px;
     font-size: 11px; 
-    color: #555; 
-    background: rgba(0,0,0,0.4);
-    margin-top: auto;
+    color: #666; 
 }
 </style>
 </head>
@@ -125,11 +122,11 @@ h1 {
     <div class="id-text">
         Get your Demo ID instantly
     </div>
-</div>
 
-<div class="footer">
-    TRUSTED PLATFORM | 24/7 INSTANT SERVICE <br>
-    © 2025 Mahadev Book Official
+    <div class="footer">
+        TRUSTED PLATFORM | 24/7 INSTANT SERVICE <br>
+        © 2025 Mahadev Book Official
+    </div>
 </div>
 
 </body>

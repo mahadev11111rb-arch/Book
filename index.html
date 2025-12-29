@@ -4,6 +4,22 @@
 <meta charset="UTF-8">
 <title>Mahadev Book – Official</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '847242087936871');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=847242087936871&ev=PageView&noscript=1"
+/></noscript>
 <style>
 body {
     margin: 0;
@@ -16,12 +32,11 @@ body {
 }
 
 .container { 
-    padding: 40px 20px; /* Header ke upar sahi gap */
+    padding: 40px 20px; 
     max-width: 500px; 
     margin: 0 auto;
 }
 
-/* Premium Gold Gradient Header */
 h1 { 
     font-size: 34px; 
     margin: 10px 0 30px 0; 
@@ -91,9 +106,8 @@ h1 {
     100% { transform: scale(1); } 
 }
 
-/* Footer ko content ke paas laya gaya hai */
 .footer { 
-    margin-top: 50px; /* Isse thoda niche push hoga par hadd se zyada nahi */
+    margin-top: 50px; 
     padding-bottom: 30px;
     font-size: 11px; 
     color: #666; 
@@ -117,7 +131,8 @@ h1 {
     </div>
 
     <div class="status-badge">● Online Now</div><br>
-    <a class="btn" href="https://wa.link/vix299">WhatsApp Now</a>
+    
+    <a class="btn" href="https://wa.link/vix299" onclick="fbq('track', 'Lead');">WhatsApp Now</a>
 
     <div class="id-text">
         Get your Demo ID instantly

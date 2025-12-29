@@ -2,66 +2,106 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Mahadev Book – Free Demo</title>
+<title>Mahadev Book – Official</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:#000;
-    color:#fff;
-    text-align:center;
+/* Professional Background with Gradient */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: radial-gradient(circle at top, #1a1a2e 0%, #0f0f0f 100%);
+    color: #ffffff;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.container{
-    padding:20px;
+.container {
+    padding: 30px 20px;
+    max-width: 500px;
+    margin: auto;
 }
 
-.banner img{
-    width:100%;
-    max-width:420px;
-    border-radius:12px;
-    margin-bottom:20px;
+/* Image styling */
+.banner img {
+    width: 65%;
+    max-width: 220px;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2); /* Soft green glow */
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-h1{
-    font-size:30px;
-    margin:10px 0;
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
-.countdown{
-    font-size:22px;
-    color:#00ff88;
-    margin:10px 0;
+/* Bonus section with professional look */
+.bonus-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    padding: 15px;
+    border-radius: 12px;
+    margin: 20px 0;
 }
 
-p{
-    color:#ccc;
-    font-size:15px;
+.bonus-text {
+    font-size: 18px;
+    color: #00ff88;
+    font-weight: 600;
+    line-height: 1.6;
 }
 
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:15px 40px;
-    background:#25D366;
-    color:#fff;
-    text-decoration:none;
-    font-size:18px;
-    border-radius:40px;
-    animation: zoom 1.2s infinite alternate;
+p {
+    color: #b0b0b0;
+    font-size: 16px;
+    margin-bottom: 30px;
 }
 
-@keyframes zoom{
-    from{transform:scale(1);}
-    to{transform:scale(1.08);}
+/* WhatsApp Button */
+.btn {
+    display: inline-block;
+    padding: 16px 45px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    transition: 0.3s;
+    animation: pulse 1.5s infinite;
 }
 
-.footer{
-    margin-top:15px;
-    font-size:12px;
-    color:#777;
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); }
+    50% { transform: scale(1.03); box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6); }
+    100% { transform: scale(1); box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); }
+}
+
+.footer {
+    margin-top: 40px;
+    font-size: 11px;
+    color: #666;
+    letter-spacing: 0.5px;
+}
+
+.status-badge {
+    display: inline-block;
+    background: rgba(0, 255, 136, 0.1);
+    color: #00ff88;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 10px;
 }
 </style>
 </head>
@@ -73,35 +113,26 @@ p{
         <img src="banner.jpg" alt="Mahadev Book">
     </div>
 
+    <div class="status-badge">● Online Now</div>
     <h1>Mahadev Book</h1>
 
-    <div class="countdown">
-        Offer ends in <span id="timer">30</span> sec
+    <div class="bonus-card">
+        <div class="bonus-text">
+            First Deposit: 10% Bonus <br>
+            Lifetime: 5% Bonus
+        </div>
     </div>
 
-    <p>WhatsApp par message karo <br>
-    Demo ID & Special Bonus ke liye</p>
+    <p>Get your <strong>Demo ID</strong> instantly <br>
+    Message us on WhatsApp</p>
 
-    <a class="btn" href="https://wa.link/vix299">WhatsApp Now</a>
+    <a class="btn" href="https://wa.link/vix299">Chat on WhatsApp</a>
 
     <div class="footer">
-        ✔ Trusted Platform | ✔ Secure Access <br>
-        24 hours service available
+        TRUSTED PLATFORM | 24/7 INSTANT SERVICE <br>
+        © 2024 Mahadev Book Official
     </div>
 
 </div>
-
-<script>
-let time = 30;
-const timer = document.getElementById("timer");
-
-setInterval(()=>{
-    if(time > 0){
-        time--;
-        timer.innerText = time;
-    }
-},1000);
-</script>
-
 </body>
 </html>

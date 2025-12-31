@@ -1,123 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Mahadev Book Official</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahadev Book Official</title>
+    <style>
+        /* Pure CSS - No External Files Needed */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0a0a0b; /* Dark Premium Background */
+            color: white;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
 
-<style>
-    :root {
-        --gold: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 100%);
-        --wa-green: linear-gradient(180deg, #25D366 0%, #128C7E 100%);
-        --card-bg: rgba(255, 255, 255, 0.06);
-    }
+        .container {
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
 
-    body {
-        margin: 0;
-        padding: 0;
-        background: #0d0d0f;
-        font-family: 'Segoe UI', Roboto, sans-serif;
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        min-height: 100vh;
-    }
+        .gift-banner {
+            background: linear-gradient(90deg, #ff0000, #b30000);
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
 
-    /* Container alignment perfect rakhne ke liye */
-    .wrapper {
-        width: 100%;
-        max-width: 400px;
-        padding: 20px;
-        box-sizing: border-box;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Hamesha center mein rakhega */
-    }
+        h1 {
+            background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 35px;
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
 
-    /* New Year Gift - Shimmer Animation */
-    .gift-tag {
-        background: linear-gradient(90deg, #d41414, #ff4b2b, #d41414);
-        background-size: 200% auto;
-        width: 100%;
-        padding: 12px 0;
-        border-radius: 12px;
-        font-weight: 800;
-        font-size: 16px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
-        animation: shine 2s linear infinite;
-    }
+        .bonus-card {
+            border: 1px solid #555;
+            padding: 15px;
+            border-radius: 15px;
+            margin: 20px 0;
+            background: rgba(255,255,255,0.05);
+        }
 
-    .logo-circle {
-        width: 70px;
-        height: 70px;
-        background: var(--gold);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 32px;
-        color: #000;
-        font-weight: 900;
-        margin-bottom: 10px;
-        box-shadow: 0 0 20px rgba(191, 149, 63, 0.4);
-    }
+        .btn {
+            display: block;
+            background: linear-gradient(180deg, #25D366, #128C7E);
+            color: white;
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            animation: pulse 1.5s infinite;
+        }
 
-    h1 {
-        font-size: 32px;
-        margin: 5px 0;
-        background: var(--gold);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-transform: uppercase;
-        font-weight: 900;
-    }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
 
-    .bonus-box {
-        background: var(--card-bg);
-        border: 1px solid rgba(255, 222, 89, 0.2);
-        width: 100%;
-        padding: 20px 0;
-        border-radius: 15px;
-        margin: 20px 0;
-        backdrop-filter: blur(5px);
-    }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+    </style>
+</head>
+<body>
 
-    .bonus-box h2 {
-        color: #fcf6ba;
-        margin: 0;
-        font-size: 22px;
-    }
+<div class="container">
+    <div class="gift-banner">🎁 NEW YEAR GIFT: ₹50 FREE</div>
+    
+    <div style="font-size: 50px; margin-bottom: 10px;">🔱</div>
+    <h1>Mahadev Book</h1>
+    <p style="color: #888;">OFFICIAL PLATFORM</p>
 
-    .online-indicator {
-        font-size: 13px;
-        color: #00ff88;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        margin-bottom: 15px;
-    }
+    <div class="bonus-card">
+        <h2 style="margin: 0; color: #fcf6ba;">10% BONUS</h2>
+        <p style="margin: 5px 0; color: #00ff88;">On Every First Deposit</p>
+    </div>
 
-    .dot {
-        width: 8px;
-        height: 8px;
-        background: #00ff88;
-        border-radius: 50%;
-        box-shadow: 0 0 8px #00ff88;
-    }
+    <p style="font-size: 14px; margin-bottom: 10px;">🟢 Online Players: 1,420</p>
+    
+    <a href="https://wa.link/vix299" class="btn">WHATSAPP FOR ID</a>
 
-    /* WhatsApp Button - Full Width for better clicks */
-    .cta-btn {
-        width: 100%;
-        padding: 18px 0;
-        background: var(--wa-green);
-        color: #fff;
-        text-decoration: none;
-        border-radius: 50px;
-        font-size: 20px;
-        font-weight: 800;
-        display: block;
-        box-shadow: 0 1
-        
+    <p style="margin-top: 25px; font-size: 12px; color: #666;">
+        FAST WITHDRAWAL | 24/7 CUSTOMER CARE
+    </p>
+</div>
+
+</body>
+</html>
+

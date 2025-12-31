@@ -2,147 +2,122 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Mahadev Book – Official</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Mahadev Book Official</title>
 
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '33474661412132188');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=33474661412132188&ev=PageView&noscript=1"
-/></noscript>
 <style>
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-    background: radial-gradient(circle at top, #1a1a2e 0%, #0f0f0f 100%);
-    color: #ffffff;
-    text-align: center;
-    min-height: 100vh;
-}
+    :root {
+        --gold: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 100%);
+        --wa-green: linear-gradient(180deg, #25D366 0%, #128C7E 100%);
+        --card-bg: rgba(255, 255, 255, 0.06);
+    }
 
-.container { 
-    padding: 40px 20px; 
-    max-width: 500px; 
-    margin: 0 auto;
-}
+    body {
+        margin: 0;
+        padding: 0;
+        background: #0d0d0f;
+        font-family: 'Segoe UI', Roboto, sans-serif;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+    }
 
-h1 { 
-    font-size: 34px; 
-    margin: 10px 0 30px 0; 
-    text-transform: uppercase; 
-    font-weight: 900; 
-    background: linear-gradient(to bottom, #cf9710 22%, #ffde59 50%, #cf9710 78%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.5));
-}
+    /* Container alignment perfect rakhne ke liye */
+    .wrapper {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Hamesha center mein rakhega */
+    }
 
-.banner img { 
-    width: 65%; 
-    max-width: 220px; 
-    border-radius: 20px; 
-    margin-bottom: 25px; 
-    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2); 
-    border: 1px solid rgba(255, 255, 255, 0.1); 
-}
+    /* New Year Gift - Shimmer Animation */
+    .gift-tag {
+        background: linear-gradient(90deg, #d41414, #ff4b2b, #d41414);
+        background-size: 200% auto;
+        width: 100%;
+        padding: 12px 0;
+        border-radius: 12px;
+        font-weight: 800;
+        font-size: 16px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+        animation: shine 2s linear infinite;
+    }
 
-.bonus-card { 
-    background: rgba(255, 255, 255, 0.05); 
-    border: 1px solid rgba(0, 255, 136, 0.3); 
-    padding: 15px; 
-    border-radius: 12px; 
-    margin-bottom: 25px; 
-}
+    .logo-circle {
+        width: 70px;
+        height: 70px;
+        background: var(--gold);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        color: #000;
+        font-weight: 900;
+        margin-bottom: 10px;
+        box-shadow: 0 0 20px rgba(191, 149, 63, 0.4);
+    }
 
-.bonus-text { 
-    font-size: 18px; 
-    color: #00ff88; 
-    font-weight: 600; 
-    line-height: 1.5; 
-}
+    h1 {
+        font-size: 32px;
+        margin: 5px 0;
+        background: var(--gold);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
 
-.status-badge { 
-    display: inline-block; 
-    color: #00ff88; 
-    font-size: 14px; 
-    margin-bottom: 8px; 
-    font-weight: bold; 
-}
+    .bonus-box {
+        background: var(--card-bg);
+        border: 1px solid rgba(255, 222, 89, 0.2);
+        width: 100%;
+        padding: 20px 0;
+        border-radius: 15px;
+        margin: 20px 0;
+        backdrop-filter: blur(5px);
+    }
 
-.btn { 
-    display: inline-block; 
-    padding: 16px 50px; 
-    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); 
-    color: #fff; 
-    text-decoration: none; 
-    font-size: 20px; 
-    border-radius: 50px; 
-    font-weight: bold; 
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); 
-    animation: pulse 1.5s infinite; 
-}
+    .bonus-box h2 {
+        color: #fcf6ba;
+        margin: 0;
+        font-size: 22px;
+    }
 
-.id-text { 
-    margin-top: 15px; 
-    color: #ffcc00; 
-    font-size: 17px; 
-    font-weight: 600; 
-}
+    .online-indicator {
+        font-size: 13px;
+        color: #00ff88;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 15px;
+    }
 
-@keyframes pulse { 
-    0% { transform: scale(1); } 
-    50% { transform: scale(1.05); } 
-    100% { transform: scale(1); } 
-}
+    .dot {
+        width: 8px;
+        height: 8px;
+        background: #00ff88;
+        border-radius: 50%;
+        box-shadow: 0 0 8px #00ff88;
+    }
 
-.footer { 
-    margin-top: 50px; 
-    padding-bottom: 30px;
-    font-size: 11px; 
-    color: #666; 
-}
-</style>
-</head>
-<body>
-
-<div class="container">
-    <h1>Mahadev Book</h1>
-
-    <div class="banner">
-        <img src="banner.jpg" alt="Mahadev Book">
-    </div>
-
-    <div class="bonus-card">
-        <div class="bonus-text">
-            First Deposit: 10% Bonus <br> 
-            Lifetime: 5% Bonus
-        </div>
-    </div>
-
-    <div class="status-badge">● Online Now</div><br>
-    
-    <a class="btn" href="https://wa.link/vix299" onclick="fbq('track', 'Contact');">WhatsApp Now</a>
-
-    <div class="id-text">
-        Get your Demo ID instantly
-    </div>
-
-    <div class="footer">
-        TRUSTED PLATFORM | 24/7 INSTANT SERVICE <br>
-        © 2010 Mahadev Book Official
-    </div>
-</div>
-
-</body>
-</html>
+    /* WhatsApp Button - Full Width for better clicks */
+    .cta-btn {
+        width: 100%;
+        padding: 18px 0;
+        background: var(--wa-green);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 50px;
+        font-size: 20px;
+        font-weight: 800;
+        display: block;
+        box-shadow: 0 1
+        

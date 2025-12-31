@@ -3,119 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahadev Book Official | Premium Platform</title>
+    <title>Mahadev Book Official</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            background: radial-gradient(circle at center, #1a1a1c 0%, #0a0a0b 100%);
-            color: white;
-            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #0a0a0b;
+            background-image: radial-gradient(circle at center, #1a1a1c 0%, #0a0a0b 100%);
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            text-align: center;
         }
 
         .container {
-            width: 92%;
-            max-width: 420px;
-            padding: 25px 15px;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 25px;
-            border: 1px solid rgba(255, 215, 0, 0.15);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
-            backdrop-filter: blur(10px);
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        /* TOP BAR WITH LIVE DATE & TIME */
-        .top-info-bar {
+        /* TOP BAR */
+        .top-bar {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            padding: 8px 12px;
-            margin-bottom: 15px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
             font-size: 10px;
-            border: 1px solid rgba(252, 246, 186, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            color: #fcf6ba;
         }
 
         .gift-banner {
-            background: linear-gradient(90deg, #ff0000, #b30000);
+            background: linear-gradient(to right, #ff0000, #b30000);
             padding: 10px;
             border-radius: 50px;
             font-weight: bold;
             font-size: 14px;
             margin-bottom: 10px;
-            animation: bounce 2s infinite;
-            border: 1px solid rgba(255,255,255,0.2);
         }
 
-        /* NEW URGENCY TIMER TEXT */
-        .urgency-text {
-            font-size: 12px;
+        .urgency-box {
             color: #ff4d4d;
+            font-size: 12px;
             font-weight: bold;
             margin-bottom: 15px;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
         .marquee-box {
-            background: rgba(0, 255, 136, 0.08);
+            background: rgba(0, 255, 136, 0.1);
             color: #00ff88;
-            padding: 6px;
+            padding: 5px;
             font-size: 12px;
-            border-radius: 8px;
             margin-bottom: 15px;
+            border-radius: 5px;
         }
 
         h1 {
             background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-size: 38px;
+            font-size: 35px;
             margin: 10px 0;
-            text-transform: uppercase;
         }
 
         .bonus-card {
-            border: 1px solid rgba(252, 246, 186, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 15px;
             border-radius: 15px;
             margin: 15px 0;
-            background: rgba(255,255,255,0.05);
+            background: rgba(255,255,255,0.02);
         }
 
-        /* BUTTON POSITIONED 20% BELOW CENTER */
-        .btn-wrapper {
-            margin-top: 40px; 
-            margin-bottom: 25px;
+        /* BUTTON ALIGNED BELOW CENTER */
+        .btn-space {
+            margin-top: 40px;
+            margin-bottom: 30px;
         }
 
-        .btn {
+        .whatsapp-btn {
             display: block;
             background: linear-gradient(180deg, #25D366, #128C7E);
-            color: white;
+            color: #fff;
             text-decoration: none;
             padding: 18px;
             border-radius: 50px;
             font-size: 20px;
             font-weight: bold;
-            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
-            animation: pulse 1.5s infinite;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
         }
 
-        .features-grid {
+        .features {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 8px;
+            gap: 10px;
+            font-size: 10px;
             margin-bottom: 20px;
         }
 
-        .feature-item {
+        .f-box {
             background: rgba(255,255,255,0.05);
-            padding: 10px
-            
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        .footer {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 10px;
+            font-size: 10px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="top-bar">
+        <div id="liveDate">Date</div>
+        <div id="liveTime">Time</div>
+    </div>
+
+    <div class="gift-banner">🎁 NEW YEAR BONUS: ₹50 FREE</div>
+    
+    <div class="urgency-box">
+        ₹50 GIFT EXPIRES IN: <span id="timer" style="font-size: 15px;">20s</span>
+    </div>
+
+    <div class="marquee-box">
+        <marquee>User 77** won ₹12,500 | User 21** withdrew ₹45,000 | User 90** won ₹5,200</marquee>
+    </div>
+
+    <div style="font-size: 30px;">🔱</div>
+    <h1>Mahadev Book</h1>
+    <p style="color: #bf953f; font-weight: bold; font-size: 12px; margin-top: -10px;">INDIA'S NO. 1 TRUSTED HUB</p>
+
+    <div class="bonus-card">
+        <h3 style="margin:0; color: #fcf6ba;">10% INSTANT BONUS</h3>
+        <p style="margin:5px 0; font-size: 12px; color: #00ff88;">On Every New ID & Deposit</p>
+    </div>
+
+    <div class="btn-space">
+        <a href="https://wa.link/vix299" class="whatsapp-btn">WHATSAPP PAR ID LEIN</a>
+    </div>
+
+    <div class="features">
+        <div class="f-box">⚡ FAST WITHDRAW</div>
+        <div class="f-box">💎 24/7 SERVICE</div>
+        <div class="f-box">🔒 100% SECURE</div>
+    </div>
+
+    <div class="footer">
+        <p>Accepted: UPI, GPay, PhonePe, Paytm</p>
+        <p>© 2024-25 Mahadev Book Official. All Rights Reserved.</p>
+    </div>
+</div>
+
+<script>
+    // Live Clock & Date
+    function startClock() {
+        setInterval(() => {
+            const now = new Date();
+            document.getElementById('liveDate').innerText = now.toLocaleDateString('en-GB', {day:'2-digit', month:'short'});
+            document.getElementById('liveTime').innerText = now.toLocaleTimeString();
+        }, 1000);
+    }
+
+    // 20s Timer
+    let timeLeft = 20;
+    function startTimer() {
+        setInterval(() => {
+            timeLeft = timeLeft <= 0 ? 20 : timeLeft - 1;
+            document.getElementById('timer').innerText = timeLeft + "s";
+        }, 1000);
+    }
+
+    startClock();
+    startTimer();
+</script>
+
+</body>
+</html>

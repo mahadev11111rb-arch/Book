@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahadev Book Official</title>
+    <title>Mahadev Book Official | Premium Platform</title>
     <style>
         body {
             margin: 0;
@@ -20,77 +20,74 @@
 
         .container {
             width: 92%;
-            max-width: 400px;
-            padding: 15px;
+            max-width: 420px;
+            padding: 25px 15px;
             background: rgba(255, 255, 255, 0.02);
-            border-radius: 20px;
+            border-radius: 25px;
             border: 1px solid rgba(255, 215, 0, 0.15);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
             backdrop-filter: blur(10px);
         }
 
         .gift-banner {
             background: linear-gradient(90deg, #ff0000, #b30000);
-            padding: 6px;
+            padding: 8px;
             border-radius: 50px;
             font-weight: bold;
-            font-size: 13px;
-            margin-bottom: 10px;
+            font-size: 14px;
+            margin-bottom: 15px;
             animation: bounce 2s infinite;
+            border: 1px solid rgba(255,255,255,0.2);
         }
 
         .marquee-box {
             background: rgba(0, 255, 136, 0.08);
             color: #00ff88;
-            padding: 4px;
-            font-size: 11px;
+            padding: 5px;
+            font-size: 12px;
             border-radius: 5px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            border-top: 1px solid rgba(0, 255, 136, 0.2);
+            border-bottom: 1px solid rgba(0, 255, 136, 0.2);
         }
 
         h1 {
             background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-size: 32px;
+            font-size: 38px;
             margin: 5px 0;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .bonus-card {
             border: 1px solid rgba(252, 246, 186, 0.3);
-            padding: 10px;
-            border-radius: 12px;
-            margin: 10px 0;
-            background: rgba(255,255,255,0.05);
+            padding: 15px;
+            border-radius: 15px;
+            margin: 15px 0;
+            background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
         }
 
         .features-grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 6px;
-            margin: 12px 0;
+            gap: 8px;
+            margin: 20px 0;
         }
 
         .feature-item {
             background: rgba(255,255,255,0.05);
-            padding: 8px 4px;
-            border-radius: 8px;
-            font-size: 10px;
+            padding: 10px 5px;
+            border-radius: 10px;
+            font-size: 11px;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
-        /* Button Section Styles */
-        .btn-wrapper {
-            margin-top: 15px;
-        }
-
-        .btn-sub-header {
-            color: #fcf6ba;
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 8px;
+        .feature-item i {
             display: block;
-            text-shadow: 0 0 10px rgba(252, 246, 186, 0.5);
+            font-size: 18px;
+            margin-bottom: 5px;
         }
 
         .btn {
@@ -98,33 +95,41 @@
             background: linear-gradient(180deg, #25D366, #128C7E);
             color: white;
             text-decoration: none;
-            padding: 15px;
+            padding: 18px;
             border-radius: 50px;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
-            box-shadow: 0 8px 15px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
             animation: pulse 1.5s infinite;
+            margin-top: 10px;
+        }
+
+        .payment-methods {
+            margin-top: 20px;
+            opacity: 0.7;
+            font-size: 12px;
         }
 
         .live-dot {
-            height: 7px;
-            width: 7px;
+            height: 8px;
+            width: 8px;
             background-color: #00ff88;
             border-radius: 50%;
             display: inline-block;
-            margin-right: 4px;
+            margin-right: 5px;
+            box-shadow: 0 0 10px #00ff88;
             animation: blink 1s infinite;
         }
 
         @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); }
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1.03); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
             100% { transform: scale(1); }
         }
 
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-3px); }
+            50% { transform: translateY(-5px); }
         }
 
         @keyframes blink {
@@ -137,49 +142,50 @@
 <body>
 
 <div class="container">
-    <div class="gift-banner">🎁 NEW YEAR BONUS: ₹50 FREE</div>
+    <div class="gift-banner">🎁 NEW YEAR BONUS: ₹50 FREE CASH</div>
     
     <div class="marquee-box">
-        <marquee scrollamount="5">User 77** won ₹12,500 | User 21** withdrew ₹45,000 | User 90** won ₹5,200</marquee>
+        <marquee scrollamount="5">
+            User 77** won ₹12,500 | User 21** withdrew ₹45,000 | User 90** won ₹5,200 | User 44** withdrew ₹8,000
+        </marquee>
     </div>
 
-    <div style="font-size: 35px; margin-bottom: 0;">🔱</div>
+    <div style="font-size: 40px;">🔱</div>
     <h1>Mahadev Book</h1>
-    <p style="color: #bf953f; font-weight: bold; font-size: 12px; margin: 0; letter-spacing: 1px;">TRUSTED OFFICIAL HUB</p>
+    <p style="color: #bf953f; font-weight: bold; margin-top: -5px; letter-spacing: 2px;">TRUSTED OFFICIAL HUB</p>
 
     <div class="bonus-card">
-        <h2 style="margin: 0; color: #fcf6ba; font-size: 18px;">10% INSTANT BONUS</h2>
-        <p style="margin: 2px 0; color: #00ff88; font-size: 13px;">On Every Deposit</p>
+        <h2 style="margin: 0; color: #fcf6ba; font-size: 22px;">10% INSTANT BONUS</h2>
+        <p style="margin: 5px 0; color: #00ff88; font-weight: bold;">On Every New ID & Deposit</p>
     </div>
 
     <div class="features-grid">
-        <div class="feature-item">⚡<br>Fast Pay</div>
-        <div class="feature-item">💎<br>24/7 Service</div>
-        <div class="feature-item)🔒<br>Trusted</div>
+        <div class="feature-item">⚡<br>Instant<br>Withdraw</div>
+        <div class="feature-item">💎<br>24/7<br>Service</div>
+        <div class="feature-item">🔒<br>100%<br>Trusted</div>
     </div>
 
-    <p style="font-size: 12px; margin-bottom: 5px;">
-        <span class="live-dot"></span> Online: <span id="playerCount">1420</span>
+    <p style="font-size: 14px; margin-bottom: 15px;">
+        <span class="live-dot"></span> Online Players: <span id="playerCount">1420</span>
     </p>
     
-    <div class="btn-wrapper">
-        <span class="btn-sub-header">With New Year Gift 🎁</span>
-        <a href="https://wa.link/vix299" class="btn">WHATSAPP FOR ID</a>
-    </div>
+    <a href="https://wa.link/vix299" class="btn">GET YOUR ID ON WHATSAPP</a>
 
-    <div style="margin-top: 15px; opacity: 0.6; font-size: 10px;">
-        <p>UPI • GPay • PhonePe • Paytm</p>
+    <div class="payment-methods">
+        <p>Accepted: UPI, GPay, PhonePe, Paytm</p>
+        <p style="font-size: 10px; color: #666; margin-top: 15px;">© 2024-25 Mahadev Book Official. All Rights Reserved.</p>
     </div>
 </div>
 
 <script>
+    // Simple script to make player count look live
     setInterval(() => {
         let count = document.getElementById('playerCount');
         let current = parseInt(count.innerText);
-        count.innerText = current + (Math.floor(Math.random() * 5) - 2);
+        let change = Math.floor(Math.random() * 5) - 2; // Randomly adds or subtracts
+        count.innerText = current + change;
     }, 3000);
 </script>
 
 </body>
-    </html>
-        
+</html>

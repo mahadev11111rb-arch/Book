@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahadev Book Official | Premium Platform</title>
+    <title>Mahadev Book Official</title>
     <style>
         body {
             margin: 0;
             padding: 0;
+            background: #0a0a0b; /* Solid color fallback */
             background: radial-gradient(circle at center, #1a1a1c 0%, #0a0a0b 100%);
             color: white;
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -20,87 +21,71 @@
         }
 
         .container {
-            width: 92%;
-            max-width: 400px;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.02);
+            width: 90%;
+            max-width: 380px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
             border-radius: 25px;
-            border: 1px solid rgba(255, 215, 0, 0.15);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             display: flex;
             flex-direction: column;
         }
 
-        /* TOP BAR: DATE, TIME & TIMER */
         .top-info-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 6px 12px;
-            margin-bottom: 10px;
+            padding: 8px 12px;
+            margin-bottom: 12px;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
             font-size: 10px;
-            border: 1px solid rgba(252, 246, 186, 0.1);
-            text-transform: uppercase;
+            border: 1px solid rgba(255, 215, 0, 0.1);
         }
 
-        .live-clock { color: rgba(255,255,255,0.8); font-family: monospace; }
-        
         .expiry-timer {
-            background: rgba(255, 77, 77, 0.2);
+            background: rgba(255, 0, 0, 0.2);
             padding: 2px 8px;
             border-radius: 4px;
-            border: 1px solid rgba(255, 77, 77, 0.3);
+            color: #ff4d4d;
             font-weight: bold;
         }
 
         .gift-banner {
             background: linear-gradient(90deg, #ff0000, #b30000);
-            padding: 8px;
+            padding: 10px;
             border-radius: 50px;
             font-weight: bold;
             font-size: 14px;
-            margin-bottom: 12px;
-            animation: bounce 2s infinite;
-        }
-
-        .marquee-box {
-            background: rgba(0, 255, 136, 0.05);
-            color: #00ff88;
-            padding: 4px;
-            font-size: 11px;
-            border-radius: 5px;
-            margin-bottom: 12px;
-            border-top: 1px solid rgba(0, 255, 136, 0.1);
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(255,0,0,0.3);
         }
 
         h1 {
             background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-size: 36px;
-            margin: 10px 0 5px 0;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .bonus-tag {
-            color: #fcf6ba;
-            font-weight: bold;
-            font-size: 14px;
-            border: 1px dashed rgba(252, 246, 186, 0.4);
-            display: inline-block;
-            padding: 5px 15px;
-            border-radius: 8px;
+            font-size: 32px;
             margin: 10px 0;
+            text-transform: uppercase;
         }
 
-        /* BUTTON WRAPPER FOR 20% BELOW CENTER ALIGNMENT */
+        .bonus-box {
+            border: 1px dashed #bf953f;
+            padding: 8px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #00ff88;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
         .btn-wrapper {
-            margin-top: 40px; 
-            margin-bottom: 25px;
+            margin-top: 45px; /* Button positioned below center */
+            margin-bottom: 30px;
         }
 
         .btn {
@@ -110,26 +95,72 @@
             text-decoration: none;
             padding: 18px;
             border-radius: 50px;
-            font-size: 22px;
+            font-size: 20px;
             font-weight: bold;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
-            animation: pulse 1.5s infinite;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
+            transition: 0.3s;
         }
 
-        .features-grid {
+        .features {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 8px;
-        }
-
-        .feature-item {
-            background: rgba(255,255,255,0.03);
-            padding: 10px 5px;
-            border-radius: 10px;
+            gap: 10px;
             font-size: 10px;
-            border: 1px solid rgba(255,255,255,0.05);
         }
 
-        @keyframes pulse { 0% { transform: scale(1); } 70% { transform: scale(1.05); } 100% { transform: scale(1); } }
-        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
-    </style
+        .f-item {
+            background: rgba(255,255,255,0.05);
+            padding: 8px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="top-info-bar">
+        <div><span id="dt"></span> | <span id="tm" style="color:#fcf6ba"></span></div>
+        <div class="expiry-timer">ENDS: <span id="cnt">20s</span></div>
+    </div>
+
+    <div class="gift-banner">🎁 NEW YEAR BONUS: ₹50 FREE</div>
+
+    <div style="font-size: 30px; margin-top: 10px;">🔱</div>
+    <h1>Mahadev Book</h1>
+    <p style="color: #bf953f; font-weight: bold; font-size: 12px; margin-top: -10px;">OFFICIAL TRUSTED HUB</p>
+
+    <div class="bonus-box">10% INSTANT BONUS ON ALL DEPOSITS</div>
+
+    <div class="btn-wrapper">
+        <a href="https://wa.link/vix299" class="btn">WHATSAPP PAR ID LEIN</a>
+    </div>
+
+    <div class="features">
+        <div class="f-item">⚡ FAST WITHDRAW</div>
+        <div class="f-item">💎 24/7 LIVE</div>
+        <div class="f-item">🔒 100% SAFE</div>
+    </div>
+</div>
+
+<script>
+    function update() {
+        const n = new Date();
+        document.getElementById('dt').innerText = n.toLocaleDateString('en-GB', {day:'2-digit', month:'short'});
+        document.getElementById('tm').innerText = n.toLocaleTimeString();
+    }
+    
+    let sec = 20;
+    function timer() {
+        setInterval(() => {
+            sec = sec <= 0 ? 20 : sec - 1;
+            document.getElementById('cnt').innerText = sec + "s";
+        }, 1000);
+    }
+
+    setInterval(update, 1000);
+    update();
+    timer();
+</script>
+
+</body>
+</html>

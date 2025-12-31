@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahadev Book Official</title>
+    <title>Mahadev Book Official | Premium Platform</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            background: #0a0a0b; /* Solid color fallback */
             background: radial-gradient(circle at center, #1a1a1c 0%, #0a0a0b 100%);
             color: white;
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -17,41 +16,30 @@
             align-items: center;
             min-height: 100vh;
             text-align: center;
-            overflow-x: hidden;
         }
 
         .container {
-            width: 90%;
-            max-width: 380px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.03);
+            width: 92%;
+            max-width: 420px;
+            padding: 25px 15px;
+            background: rgba(255, 255, 255, 0.02);
             border-radius: 25px;
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+            border: 1px solid rgba(255, 215, 0, 0.15);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
             backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            display: flex;
-            flex-direction: column;
         }
 
+        /* TOP BAR WITH LIVE DATE & TIME */
         .top-info-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 8px 12px;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
+            border-radius: 12px;
             font-size: 10px;
-            border: 1px solid rgba(255, 215, 0, 0.1);
-        }
-
-        .expiry-timer {
-            background: rgba(255, 0, 0, 0.2);
-            padding: 2px 8px;
-            border-radius: 4px;
-            color: #ff4d4d;
-            font-weight: bold;
+            border: 1px solid rgba(252, 246, 186, 0.1);
         }
 
         .gift-banner {
@@ -60,32 +48,51 @@
             border-radius: 50px;
             font-weight: bold;
             font-size: 14px;
+            margin-bottom: 10px;
+            animation: bounce 2s infinite;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* NEW URGENCY TIMER TEXT */
+        .urgency-text {
+            font-size: 12px;
+            color: #ff4d4d;
+            font-weight: bold;
             margin-bottom: 15px;
-            box-shadow: 0 5px 15px rgba(255,0,0,0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .marquee-box {
+            background: rgba(0, 255, 136, 0.08);
+            color: #00ff88;
+            padding: 6px;
+            font-size: 12px;
+            border-radius: 8px;
+            margin-bottom: 15px;
         }
 
         h1 {
             background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-size: 32px;
+            font-size: 38px;
             margin: 10px 0;
             text-transform: uppercase;
         }
 
-        .bonus-box {
-            border: 1px dashed #bf953f;
-            padding: 8px;
-            border-radius: 10px;
-            margin: 10px 0;
-            color: #00ff88;
-            font-weight: bold;
-            font-size: 13px;
+        .bonus-card {
+            border: 1px solid rgba(252, 246, 186, 0.3);
+            padding: 15px;
+            border-radius: 15px;
+            margin: 15px 0;
+            background: rgba(255,255,255,0.05);
         }
 
+        /* BUTTON POSITIONED 20% BELOW CENTER */
         .btn-wrapper {
-            margin-top: 45px; /* Button positioned below center */
-            margin-bottom: 30px;
+            margin-top: 40px; 
+            margin-bottom: 25px;
         }
 
         .btn {
@@ -98,69 +105,17 @@
             font-size: 20px;
             font-weight: bold;
             box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
-            transition: 0.3s;
+            animation: pulse 1.5s infinite;
         }
 
-        .features {
+        .features-grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 10px;
-            font-size: 10px;
+            gap: 8px;
+            margin-bottom: 20px;
         }
 
-        .f-item {
+        .feature-item {
             background: rgba(255,255,255,0.05);
-            padding: 8px;
-            border-radius: 8px;
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <div class="top-info-bar">
-        <div><span id="dt"></span> | <span id="tm" style="color:#fcf6ba"></span></div>
-        <div class="expiry-timer">ENDS: <span id="cnt">20s</span></div>
-    </div>
-
-    <div class="gift-banner">🎁 NEW YEAR BONUS: ₹50 FREE</div>
-
-    <div style="font-size: 30px; margin-top: 10px;">🔱</div>
-    <h1>Mahadev Book</h1>
-    <p style="color: #bf953f; font-weight: bold; font-size: 12px; margin-top: -10px;">OFFICIAL TRUSTED HUB</p>
-
-    <div class="bonus-box">10% INSTANT BONUS ON ALL DEPOSITS</div>
-
-    <div class="btn-wrapper">
-        <a href="https://wa.link/vix299" class="btn">WHATSAPP PAR ID LEIN</a>
-    </div>
-
-    <div class="features">
-        <div class="f-item">⚡ FAST WITHDRAW</div>
-        <div class="f-item">💎 24/7 LIVE</div>
-        <div class="f-item">🔒 100% SAFE</div>
-    </div>
-</div>
-
-<script>
-    function update() {
-        const n = new Date();
-        document.getElementById('dt').innerText = n.toLocaleDateString('en-GB', {day:'2-digit', month:'short'});
-        document.getElementById('tm').innerText = n.toLocaleTimeString();
-    }
-    
-    let sec = 20;
-    function timer() {
-        setInterval(() => {
-            sec = sec <= 0 ? 20 : sec - 1;
-            document.getElementById('cnt').innerText = sec + "s";
-        }, 1000);
-    }
-
-    setInterval(update, 1000);
-    update();
-    timer();
-</script>
-
-</body>
-</html>
+            padding: 10px
+            

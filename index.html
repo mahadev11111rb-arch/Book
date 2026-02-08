@@ -15,7 +15,7 @@
             justify-content: center;
             align-items: flex-start;
             min-height: 100vh;
-            padding-top: 2vh; /* Top gap reduced to 2% */
+            padding-top: 2vh;
         }
 
         .container {
@@ -30,7 +30,6 @@
             box-shadow: 0 0 30px rgba(0,0,0,0.8);
         }
 
-        /* BRANDING TOP SECTION */
         .branding-header {
             margin-bottom: 20px;
         }
@@ -41,7 +40,6 @@
             margin-bottom: 5px;
         }
 
-        /* FIRE EFFECT FOR MAHADEV BOOK */
         .fire-text {
             font-size: 42px;
             font-weight: 900;
@@ -51,7 +49,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin: 0;
-            /* Fire glow effect */
             text-shadow: 0px -2px 4px #fff, 0px -4px 10px #ff0, 0px -10px 20px #ff8000, 0px -18px 40px #f00;
             animation: burn 1.5s infinite alternate;
         }
@@ -71,7 +68,6 @@
             display: block;
         }
 
-        /* LIVE BAR */
         .top-bar {
             display: flex;
             justify-content: space-between;
@@ -83,7 +79,6 @@
             color: #fcf6ba;
         }
 
-        /* ZOOM & GLOW ANIMATIONS */
         .gift-banner {
             background: linear-gradient(to right, #ff0000, #b30000);
             padding: 12px;
@@ -166,11 +161,8 @@
         <div id="liveTime">00:00:00</div>
     </div>
 
-    <div class="gift-banner">🎁 NEW YEAR BONUS: ₹50 FREE</div>
-    
-    <div style="color: #ff4d4d; font-size: 12px; font-weight: bold; margin: 10px 0;">
-        ₹50 GIFT EXPIRES IN: <span id="timer" style="font-size: 16px;">20s</span>
-    </div>
+    <!-- ✅ Welcome Bonus Added -->
+    <div class="gift-banner">🎉 20% WELCOME BONUS ON FIRST DEPOSIT</div>
 
     <div class="marquee-box">
         <marquee scrollamount="5">User 77** won ₹12,500 | User 21** withdrew ₹45,000 | User 90** won ₹5,200</marquee>
@@ -181,7 +173,7 @@
     </div>
 
     <div class="btn-space">
-        <a href=https://wa.link/7mwfa9 class="whatsapp-btn">GET YOUR ID NOW</a>
+        <a href="https://wa.link/7mwfa9" class="whatsapp-btn">GET YOUR ID NOW</a>
     </div>
 
     <div class="features">
@@ -205,16 +197,7 @@
         }, 1000);
     }
 
-    let timeLeft = 20;
-    function startTimer() {
-        setInterval(() => {
-            timeLeft = (timeLeft <= 0) ? 20 : timeLeft - 1;
-            document.getElementById('timer').innerText = timeLeft + "s";
-        }, 1000);
-    }
-
     startClock();
-    startTimer();
 </script>
 
 </body>

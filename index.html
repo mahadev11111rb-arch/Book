@@ -1,203 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahadev Book Official</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: radial-gradient(circle at center, #1a1a1c 0%, #0a0a0b 100%);
-            color: #ffffff;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-            padding-top: 2vh;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahadev Book Official</title>
 
-        .container {
-            width: 90%;
-            max-width: 400px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 215, 0, 0.15);
-            border-radius: 25px;
-            text-align: center;
-            backdrop-filter: blur(15px);
-            box-shadow: 0 0 30px rgba(0,0,0,0.8);
-        }
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}
+(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 
-        .branding-header {
-            margin-bottom: 20px;
-        }
+fbq('init', '33474661412132188');
+fbq('track', 'PageView');
+</script>
 
-        .logo-icon {
-            font-size: 50px;
-            filter: drop-shadow(0 0 10px #ffaa00);
-            margin-bottom: 5px;
-        }
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=33474661412132188&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
 
-        .fire-text {
-            font-size: 42px;
-            font-weight: 900;
-            text-transform: uppercase;
-            position: relative;
-            background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin: 0;
-            text-shadow: 0px -2px 4px #fff, 0px -4px 10px #ff0, 0px -10px 20px #ff8000, 0px -18px 40px #f00;
-            animation: burn 1.5s infinite alternate;
-        }
-
-        @keyframes burn {
-            0% { text-shadow: 0px -2px 4px #fff, 0px -4px 10px #ff0, 0px -10px 20px #ff8000, 0px -18px 40px #f00; }
-            100% { text-shadow: 0px -2px 4px #fff, 0px -4px 15px #ff0, 0px -12px 25px #ff8000, 0px -22px 50px #f00; transform: scale(1.01); }
-        }
-
-        .trusted-tag {
-            color: #bf953f;
-            font-weight: bold;
-            font-size: 14px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-top: -5px;
-            display: block;
-        }
-
-        .top-bar {
-            display: flex;
-            justify-content: space-between;
-            font-size: 10px;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 8px 12px;
-            border-radius: 10px;
-            margin: 15px 0;
-            color: #fcf6ba;
-        }
-
-        .gift-banner {
-            background: linear-gradient(to right, #ff0000, #b30000);
-            padding: 12px;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 15px;
-            animation: zoomGlowRed 2s infinite ease-in-out;
-        }
-
-        @keyframes zoomGlowRed {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 10px #ff0000; }
-            50% { transform: scale(1.05); box-shadow: 0 0 25px #ff4d4d; }
-        }
-
-        .marquee-box {
-            background: rgba(0, 255, 136, 0.08);
-            color: #00ff88;
-            padding: 6px;
-            font-size: 12px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-
-        .btn-space {
-            margin-top: 50px;
-            margin-bottom: 30px;
-        }
-
-        .whatsapp-btn {
-            display: block;
-            background: linear-gradient(180deg, #25D366, #128C7E);
-            color: #fff;
-            text-decoration: none;
-            padding: 20px;
-            border-radius: 50px;
-            font-size: 24px;
-            font-weight: bold;
-            animation: zoomGlowGreen 1.5s infinite ease-in-out;
-        }
-
-        @keyframes zoomGlowGreen {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 15px rgba(37, 211, 102, 0.5); }
-            50% { transform: scale(1.08); box-shadow: 0 0 35px rgba(37, 211, 102, 0.9); }
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 10px;
-            margin-bottom: 25px;
-        }
-
-        .f-box {
-            background: rgba(255,255,255,0.05);
-            padding: 10px;
-            border-radius: 12px;
-            font-size: 10px;
-            border: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .footer {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 15px;
-            font-size: 11px;
-            color: #777;
-        }
-    </style>
+<style>
+body{
+margin:0;padding:0;
+background:radial-gradient(circle at center,#1a1a1c 0%,#0a0a0b 100%);
+color:#fff;font-family:'Segoe UI',Arial,sans-serif;
+display:flex;justify-content:center;
+align-items:flex-start;min-height:100vh;padding-top:2vh;
+}
+.container{
+width:90%;max-width:400px;padding:20px;
+background:rgba(255,255,255,0.02);
+border:1px solid rgba(255,215,0,0.15);
+border-radius:25px;text-align:center;
+backdrop-filter:blur(15px);
+box-shadow:0 0 30px rgba(0,0,0,0.8);
+}
+.logo-icon{
+font-size:50px;
+filter:drop-shadow(0 0 10px #ffaa00);
+margin-bottom:5px;
+}
+.fire-text{
+font-size:42px;font-weight:900;
+text-transform:uppercase;
+background:linear-gradient(135deg,#bf953f,#fcf6ba,#b38728);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:burn 1.5s infinite alternate;
+}
+@keyframes burn{
+0%{transform:scale(1)}
+100%{transform:scale(1.02)}
+}
+.top-bar{
+display:flex;justify-content:space-between;
+font-size:10px;background:rgba(255,255,255,0.05);
+padding:8px 12px;border-radius:10px;
+margin:15px 0;color:#fcf6ba;
+}
+.gift-banner{
+background:linear-gradient(to right,#ff0000,#b30000);
+padding:12px;border-radius:50px;
+font-weight:bold;font-size:15px;
+animation:zoomGlowRed 2s infinite ease-in-out;
+}
+@keyframes zoomGlowRed{
+0%,100%{transform:scale(1);box-shadow:0 0 10px #ff0000;}
+50%{transform:scale(1.05);box-shadow:0 0 25px #ff4d4d;}
+}
+.marquee-box{
+background:rgba(0,255,136,0.08);
+color:#00ff88;padding:6px;font-size:12px;
+margin-bottom:20px;border-radius:8px;
+}
+.btn-space{margin-top:50px;margin-bottom:30px;}
+.whatsapp-btn{
+display:block;
+background:linear-gradient(180deg,#25D366,#128C7E);
+color:#fff;text-decoration:none;
+padding:20px;border-radius:50px;
+font-size:24px;font-weight:bold;
+animation:zoomGlowGreen 1.5s infinite ease-in-out;
+}
+@keyframes zoomGlowGreen{
+0%,100%{transform:scale(1);
+box-shadow:0 0 15px rgba(37,211,102,0.5);}
+50%{transform:scale(1.08);
+box-shadow:0 0 35px rgba(37,211,102,0.9);}
+}
+.features{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:10px;margin-bottom:25px;
+}
+.f-box{
+background:rgba(255,255,255,0.05);
+padding:10px;border-radius:12px;
+font-size:10px;
+border:1px solid rgba(255,255,255,0.05);
+}
+.footer{
+border-top:1px solid rgba(255,255,255,0.1);
+padding-top:15px;font-size:11px;color:#777;
+}
+</style>
 </head>
+
 <body>
 
 <div class="container">
-    <div class="branding-header">
-        <div class="logo-icon">🔱</div>
-        <h1 class="fire-text">Mahadev Book</h1>
-        <span class="trusted-tag">Trusted Official Hub</span>
-    </div>
 
-    <div class="top-bar">
-        <div id="liveDate">Loading...</div>
-        <div id="liveTime">00:00:00</div>
-    </div>
+<div class="logo-icon">🔱</div>
+<h1 class="fire-text">Mahadev Book</h1>
 
-    <!-- ✅ Welcome Bonus Added -->
-    <div class="gift-banner">🎉 20% WELCOME BONUS ON FIRST DEPOSIT</div>
+<div class="top-bar">
+<div id="liveDate">Loading...</div>
+<div id="liveTime">00:00:00</div>
+</div>
 
-    <div class="marquee-box">
-        <marquee scrollamount="5">User 77** won ₹12,500 | User 21** withdrew ₹45,000 | User 90** won ₹5,200</marquee>
-    </div>
+<div class="gift-banner">🎉 20% WELCOME BONUS ON FIRST DEPOSIT</div>
 
-    <div style="border: 1px dashed rgba(0, 255, 136, 0.5); padding: 12px; border-radius: 15px; margin-top: 10px;">
-        <span style="color: #00ff88; font-weight: bold; font-size: 14px;">10% INSTANT BONUS ON EVERY DEPOSIT</span>
-    </div>
+<div class="marquee-box">
+<marquee>User 77** won ₹12,500 | User 21** withdrew ₹45,000 | User 90** won ₹5,200</marquee>
+</div>
 
-    <div class="btn-space">
-        <a href="https://wa.link/7mwfa9" class="whatsapp-btn">GET YOUR ID NOW</a>
-    </div>
+<div class="btn-space">
+<a href="https://wa.link/7mwfa9"
+class="whatsapp-btn"
+onclick="
+fbq('track','Contact');
+fbq('trackCustom','WhatsAppOpen');
+">
+GET YOUR ID NOW
+</a>
+</div>
 
-    <div class="features">
-        <div class="f-box">⚡ FAST WITHDRAW</div>
-        <div class="f-box">💎 24/7 SERVICE</div>
-        <div class="f-box">🔒 100% SECURE</div>
-    </div>
+<div class="features">
+<div class="f-box">⚡ FAST WITHDRAW</div>
+<div class="f-box">💎 24/7 SERVICE</div>
+<div class="f-box">🔒 100% SECURE</div>
+</div>
 
-    <div class="footer">
-        <p>Accepted: UPI, GPay, PhonePe, Paytm</p>
-        <p>© 2024-25 Mahadev Book Official. All Rights Reserved.</p>
-    </div>
+<div class="footer">
+<p>Accepted: UPI, GPay, PhonePe, Paytm</p>
+<p>© 2024-25 Mahadev Book Official</p>
+</div>
+
 </div>
 
 <script>
-    function startClock() {
-        setInterval(() => {
-            const now = new Date();
-            document.getElementById('liveDate').innerText = now.toLocaleDateString('en-GB', {day:'2-digit', month:'short'});
-            document.getElementById('liveTime').innerText = now.toLocaleTimeString();
-        }, 1000);
-    }
-
-    startClock();
+function startClock(){
+setInterval(()=>{
+const now=new Date();
+document.getElementById('liveDate').innerText=
+now.toLocaleDateString('en-GB',{day:'2-digit',month:'short'});
+document.getElementById('liveTime').innerText=
+now.toLocaleTimeString();
+},1000);
+}
+startClock();
 </script>
 
 </body>
